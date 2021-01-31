@@ -1,0 +1,71 @@
+@import './config';
+
+.card {
+  &__wrapper {
+    height: 75px;
+    width: 75px;
+    perspective: 500px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__flip-zone {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out, height 400ms ease-in-out,
+      width 400ms ease-in-out;
+
+    &_flipped {
+      transform: rotateY(180deg);
+    }
+
+    &_hidden {
+      height: 0;
+      width: 0;
+      transform: rotateY(0deg) rotateZ(360deg);
+    }
+  }
+
+  @mixin Card {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: box-shadow ease-out 200ms, background-color ease-out 200ms;
+  }
+
+  &__back {
+    @include Card;
+    background-color: $background-card-back-color;
+    box-shadow: $box-shadow-primary;
+
+    &_hoverable {
+      &:hover {
+        background-color: $background-card-back-hover-color;
+        box-shadow: $box-shadow-active;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__front {
+    @include Card;
+    background-color: $background-card-front-color;
+    box-shadow: $box-shadow-active;
+    transform: rotateY(180deg);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 70%;
+    }
+  }
+}

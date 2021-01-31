@@ -1,0 +1,48 @@
+@import './config';
+
+.button {
+  width: 163px;
+  height: 38px;
+  background-color: $background-button-color;
+  box-shadow: $box-shadow-primary;
+  border-radius: 27px;
+  border: none;
+  outline: none;
+  font-family: $font-family-primary;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $text-secondary-color;
+  transition: box-shadow ease-in-out 50ms, width 50ms ease-in-out,
+    height 50ms ease-in-out, font-size 50ms ease-in-out;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    width: 166px;
+    height: 41px;
+    font-size: 19px;
+    box-shadow: $box-shadow-active;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  @keyframes blink {
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  &_animation {
+    &_blink {
+      animation: blink 600ms linear infinite alternate;
+    }
+  }
+}

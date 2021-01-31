@@ -1,0 +1,19 @@
+@import './config';
+
+.container {
+  background-color: $background-container-color;
+  border-radius: 25px;
+  height: 740px;
+  width: 620px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px 50px 50px;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+  }
+}

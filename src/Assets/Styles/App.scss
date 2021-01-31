@@ -1,0 +1,9 @@
+@import './config';
+
+.app {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+}

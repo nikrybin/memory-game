@@ -1,0 +1,11 @@
+@import './config';
+
+.header {
+  &__title {
+    color: $text-primary-color;
+    font-family: $font-family-primary;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+  }
+}

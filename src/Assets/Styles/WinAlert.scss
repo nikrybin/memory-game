@@ -1,0 +1,28 @@
+@import './config';
+
+.win-alert {
+  @keyframes jump {
+    0% {
+      transform: translateY(-390px);
+    }
+    100% {
+      transform: translateY(-420px);
+    }
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-1010px);
+    }
+
+    100% {
+      transform: translateY(-390px);
+    }
+  }
+
+  &__wrapper {
+    animation: fall 1s ease-in-out,
+      jump 500ms ease-in-out alternate infinite 1000ms;
+    position: absolute;
+  }
+}

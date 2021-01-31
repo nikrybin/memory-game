@@ -1,0 +1,10 @@
+@import './config';
+
+.board {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 13px;
+    justify-content: center;
+  }
+}

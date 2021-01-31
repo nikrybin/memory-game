@@ -1,0 +1,9 @@
+@import './config';
+
+.game-info-container {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

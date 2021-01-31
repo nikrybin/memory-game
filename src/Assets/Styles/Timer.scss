@@ -1,0 +1,11 @@
+@import './config';
+
+.timer {
+  font-family: $font-family-primary;
+  font-size: 24px;
+  color: $text-primary-color;
+
+  &__wrapper {
+    width: 138px;
+  }
+}

@@ -1,0 +1,7 @@
+export const ADD_MOVE = 'ADD_MOVE'
+export const CLOSE_CARD = 'CLOSE_CARD'
+export const OPEN_CARD = 'OPEN_CARD'
+export const KILL_RESET = 'KILL_RESET'
+export const RESET_GAME = 'RESET_GAME'
+export const SET_MATCH = 'SET_MATCH'
+export const START_GAME = 'START_GAME'
