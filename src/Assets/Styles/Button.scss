@@ -1,8 +1,6 @@
 @import './config';
 
 .button {
-  width: 163px;
-  height: 38px;
   background-color: $background-button-color;
   box-shadow: $box-shadow-primary;
   border-radius: 27px;
@@ -14,24 +12,42 @@
   color: $text-secondary-color;
   transition: box-shadow ease-in-out 50ms, width 50ms ease-in-out,
     height 50ms ease-in-out, font-size 50ms ease-in-out;
-  font-size: 18px;
+  width: 120px;
+  height: 30px;
+  font-size: 16px;
+
+  @media (min-width: 500px) and (min-height: 600px) {
+    font-size: 18px;
+    width: 163px;
+    height: 38px;
+  }
 
   &:hover {
     cursor: pointer;
   }
 
   &:active {
-    width: 166px;
-    height: 41px;
-    font-size: 19px;
+    font-size: 17px;
+    width: 123px;
+    height: 33px;
     box-shadow: $box-shadow-active;
+
+    @media (min-width: 500px) and (min-height: 600px) {
+      width: 166px;
+      height: 41px;
+      font-size: 19px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 35px;
+
+    @media (min-width: 500px) and (min-height: 600px) {
+      height: 45px;
+    }
   }
 
   @keyframes blink {

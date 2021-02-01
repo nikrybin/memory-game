@@ -2,8 +2,8 @@
 
 .card {
   &__wrapper {
-    height: 75px;
-    width: 75px;
+    height: 100%;
+    width: 100%;
     perspective: 500px;
     align-items: center;
     display: flex;
@@ -33,8 +33,7 @@
 
   @mixin Card {
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 20px;
+    border-radius: 25%;
     height: 100%;
     width: 100%;
     position: absolute;

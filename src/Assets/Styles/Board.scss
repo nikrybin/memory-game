@@ -4,7 +4,23 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(6, auto);
-    grid-gap: 13px;
     justify-content: center;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    height: calc(min(14vh, 14vw));
+    width: calc(min(14vh, 14vw));
+
+    @media (min-width: 500px) {
+      margin: 5px;
+      height: min(10vh, 10vw);
+      width: min(10vh, 10vw);
+      max-width: 75px;
+      max-height: 75px;
+    }
   }
 }
