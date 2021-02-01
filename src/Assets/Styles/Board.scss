@@ -1,6 +1,8 @@
 @import './config';
 
 .board {
+  position: relative;
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(6, auto);

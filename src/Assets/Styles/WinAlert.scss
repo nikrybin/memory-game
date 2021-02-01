@@ -3,10 +3,10 @@
 .win-alert {
   @keyframes jump {
     0% {
-      transform: translateY(-390px);
+      transform: translateY(-45vh);
     }
     100% {
-      transform: translateY(-420px);
+      transform: translateY(-50vh);
     }
   }
 
@@ -16,7 +16,28 @@
     }
 
     100% {
-      transform: translateY(-390px);
+      transform: translateY(-45vh);
+    }
+  }
+
+  @media (min-height: 1100px) {
+    @keyframes jump {
+      0% {
+        transform: translateY(-30vh);
+      }
+      100% {
+        transform: translateY(-35vh);
+      }
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-1010px);
+      }
+
+      100% {
+        transform: translateY(-30vh);
+      }
     }
   }
 
@@ -24,5 +45,11 @@
     animation: fall 1s ease-in-out,
       jump 500ms ease-in-out alternate infinite 1000ms;
     position: absolute;
+    width: 100%;
+
+    svg {
+      position: relative;
+      width: 100%;
+    }
   }
 }
